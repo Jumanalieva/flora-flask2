@@ -20,7 +20,7 @@ app = Flask(__name__)
 app.config.from_object(Config)  # Load configuration
 
 # Enabling CORS for all routes in the app with specific settings
-CORS(app, resources={r"/*": {"origins": ["*"]}}, supports_credentials=True)
+CORS(app, resources={r"/*": {"origins": ["http://100.26.195.185:3000"]}}, supports_credentials=True)
 
 app.json_encoder = JSONEncoder
 

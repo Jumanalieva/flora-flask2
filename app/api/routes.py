@@ -151,3 +151,7 @@ def delete_blog(id):
     db.session.delete(blog)
     db.session.commit()
     return jsonify(blog_schema.dump(blog))
+
+
+
+
