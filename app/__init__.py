@@ -20,7 +20,7 @@ app = Flask(__name__)
 app.config.from_object(Config)  # Load configuration
 
 # Enabling CORS for all routes in the app with specific settings
-CORS(app, resources={r"/*": {"origins": ["http://localhost:5173/"]}}, supports_credentials=True)
+CORS(app, resources={r"/*": {"origins": ["http://fflora.com.s3-website-us-east-1.amazonaws.com/"]}}, supports_credentials=True)
 
 app.json_encoder = JSONEncoder
 
