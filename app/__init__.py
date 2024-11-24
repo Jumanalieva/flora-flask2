@@ -92,5 +92,9 @@ def get_answer():
         return jsonify({"error": "Failed to communicate with OpenAI API"}), 500
 
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+# if __name__ == '__main__':
+#     app.run(host='0.0.0.0', port=5000, debug=True)
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Render provides the PORT variable
+    app.run(host="0.0.0.0", port=port)
